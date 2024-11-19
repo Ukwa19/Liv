@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	
+-->
+<html>
+	<head>
+		<title>Olivia Ashiedu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work" class="icon solid fa-folder"><span>About me</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+						<a href="https://www.linkedin.com/in/oliviaashiedu" class="icon brands fa-linkedin-in"><span>LinkedIn</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Olivia Ashiedu</h1>
+									<p>Administrator | Executive Assistant | Operations Manager</p>
+									<p></a>
+										<ul class="actions">
+											<li><a href="https://drive.google.com/file/d/1q0X0HffyLesO3BNfSgssrQydWYZreIUf/view?usp=drivesdk" class="button" button style="background-color: #035788; border-radius: 20px;">Résumé</a></li>
+										</ul></p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>Learn more about me</span></span>
+									<img src="images/Liv 2.jpg" alt="" />
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>About me</h2>
+								</header>
+
+
+								<section>
+									<!--   -->
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/Liv.jpg" alt=""></a>
+										</div>
+										
+									</div>
+								</section>
+
+								<p>
+									Picture this: It’s 2020, and like everyone else, I’m in my pajamas, on my third cup of coffee, juggling a Zoom meeting with my left hand while trying to convince my cat that my keyboard is not a pillow. The world went remote, and I discovered that, actually, I thrive in this chaos.
+								</p>
+
+								<p>
+									The pandemic introduced me to the joys (and quirks) of working from home, and I quickly realized virtual assistance is my sweet spot. I get to help entrepreneurs, small business owners, and busy professionals get their work done—minus the cat interruptions (usually). Whether it’s managing calendars, tackling email overload, or setting up that perfect Zoom call (yes, I will remind you to unmute), I’m here to make life easier.
+								</p>
+
+								<p>
+									With a blend of tech-savviness and a dash of humor, I navigate digital tools like a pro—streamlining workflows, boosting productivity, and keeping things running smoothly. From client communications to task management, I’m your go-to person for getting things done, all while enjoying the remote life that fits me perfectly.
+								</p>
+
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="https://formspree.io/f/myzypwkw" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+
+								<p id="successMessage" style="display:none; color: green;">Thank you for contacting me! I'll get back to you shortly.</p>
+
+									<script>
+										const form = document.getElementById("contactForm");
+										const successMessage = document.getElementById("successMessage");
+									
+										form.addEventListener("submit", function(event) {
+											event.preventDefault(); // Prevent form submission
+											const formData = new FormData(form);
+									
+											fetch(form.action, {
+												method: "POST",
+												body: formData,
+											})
+											.then(response => {
+												if (response.ok) {
+													form.reset(); // Reset form fields
+													successMessage.style.display = "block"; // Show success message
+												} else {
+													alert("There was an issue with your submission. Please try again.");
+												}
+											})
+											.catch(error => {
+												alert("There was an error. Please try again.");
+											});
+										});
+									</script>
+							</article>
+
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Olivia Ashiedu.</li><li> <a href="#"></a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
